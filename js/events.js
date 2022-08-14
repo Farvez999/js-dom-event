@@ -18,3 +18,14 @@ greenButton.addEventListener('click', function makeGreen() {
 document.getElementById('make-orange').addEventListener('click', function () {
     document.body.style.backgroundColor = 'orange';
 })
+
+document.getElementById('update-button').addEventListener('click', function () {
+    const inputFlied = document.getElementById('input-flied');
+    const inputText = inputFlied.value;
+
+    const p = document.getElementById('text');
+    p.innerText = inputText;
+    inputFlied.value = '';
+})
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+</head>
+
+<body>
+    <h1 id="sercit-info">This is sercit</h1>
+    <input id="delete-confirm" type="text">
+    <button id="btn-delete">Delete</button>
+
+    <script>
+        document.getElementById('delete-confirm').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            const deleteBtn = document.getElementById('btn-delete');
+            if (text == 'delete') {
+                deleteBtn.removeAttribute('disabled');
+            } else {
+                deleteBtn.setAttribute('disabled', true);
+            }
+        })
+
+        document.getElementById('btn-delete').addEventListener('click', function () {
+            const sercitBtn = document.getElementById('sercit-info');
+            sercitBtn.style.display = 'none';
+        })
+    </script>
+</body>
+
+</html>
